@@ -1,0 +1,6 @@
+PROGRAM HelloWorld(INPUT, OUTPUT);
+BEGIN
+  WRITELN('Content-Type: text/plain');
+  WRITELN;
+  WRITELN("HELLO WORLD")
+END.
