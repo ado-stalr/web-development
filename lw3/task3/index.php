@@ -10,8 +10,8 @@ function isValue($str)
 
 function printPasswordVerifyErrors()
 {
-    echo 'No. It\'s uncorrect password' . "\n";
-    echo "Identifier can contain only latin letters and digits!\n";
+    echo 'Uncorrect password!' . "\n";
+    echo "Password can contain only latin letters and digits!\n";
 }
 
 function computeStrength($pass)
