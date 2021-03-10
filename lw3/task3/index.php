@@ -1,35 +1,28 @@
 <?php
 header("Content-Type: text/plain");
-
 $pattern_password = '/^[a-zA-Z0-9]*$/';
 
-function isValue($str)
+function getParameter($parameter): ?string
 {
-    return (isset($_GET[$str])) && ($_GET[$str] !== '');
+    return $_GET[$parameter] ?? null;
 }
 
-function printPasswordVerifyErrors()
-{
-    echo 'Uncorrect password!' . "\n";
-    echo "Password can contain only latin letters and digits!\n";
-}
-
-function computeStrength($pass)
+function computeStrength($pass): int
 {
     $len = strlen($pass);
     $result = 0;
     $result += 4 * $len;
     preg_match_all('/[0-9]/', $pass, $digits);
-    $result += 4 * sizeof($digits[0]);
-    preg_match_all('/[A-Z]/', $pass, $UpperCase);
-    if (sizeof($UpperCase[0]) > 0)
+    $result += 4 * count($digits[0]);
+    preg_match_all('/[A-Z]/', $pass, $upperCase);
+    if (count($upperCase[0]) > 0)
     {
-        $result += 2 * ($len - sizeof($UpperCase[0]));
+        $result += 2 * ($len - count($upperCase[0]));
     }
-    preg_match_all('/[a-z]/', $pass, $LowerCase);
-    if (sizeof($LowerCase[0]) > 0)
+    preg_match_all('/[a-z]/', $pass, $lowerCase);
+    if (count($lowerCase[0]) > 0)
     {
-        $result += 2 * ($len - sizeof($LowerCase[0]));
+        $result += 2 * ($len - count($lowerCase[0]));
     }
     if (preg_match('/^[a-zA-Z]*$/', $pass))
     {
@@ -40,27 +33,28 @@ function computeStrength($pass)
         $result -= $len;
     }
     $simbols = array_count_values(str_split($pass));
-    foreach($simbols as $amt)
+    foreach($simbols as $amount)
     {
-        if($amt > 1)
+        if($amount > 1)
         {
-            $result -= $amt;
+            $result -= $amount;
         }
     }
     return $result;
 }
 
-if (isValue('password'))
+$password = getParameter('password');
+if ($password)
 {
-    $password = $_GET['password'];
-    echo 'Password: ' . $password . "\n";
+    echo "Password: {$password}" . PHP_EOL;
     if (preg_match($pattern_password, $password))
     {
         echo 'Strength: ' . (string)computeStrength($password);
     }
     else
     {
-        printPasswordVerifyErrors();
+        echo 'Uncorrect password!' . PHP_EOL;
+        echo 'Password can contain only latin letters and digits!' . PHP_EOL;
     }
 }
 else

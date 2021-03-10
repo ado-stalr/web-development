@@ -1,37 +1,27 @@
 <?php
 header("Content-Type: text/plain");
 $dataPath = '../task4/data/';
+$paramNames = [
+    'email' => 'Email',
+    'first_name' => 'First Name',
+    'last_name' => 'Last Name',
+    'age' => 'Age',
+];
 
-function isValue($str)
+function getParameter($parameter): ?string
 {
-    return (isset($_GET[$str])) && ($_GET[$str] !== '');
+    return $_GET[$parameter] ?? null;
 }
 
-function printEmailVerifyErrors()
+function getUserInfoFile($path, $paramNames): void
 {
-    echo 'Uncorrect email!';
-}
-
-function getUserInfoFile($path)
-{
-    function printUserInfo($user)
-    {
-        $email = isset($user['email']) ? (string)$user['email'] : ' ';
-        $first_name = isset($user['first_name']) ? (string)$user['first_name'] : ' ';
-        $last_name = isset($user['last_name']) ? (string)$user['last_name'] : ' ';
-        $age = isset($user['age']) ? (string)$user['age'] : ' ';
-
-        echo "User's info\n";
-        echo "Email: {$email}\n";
-        echo "First Name: {$first_name}\n";
-        echo "Last Name: {$last_name}\n";
-        echo "Age: {$age}\n";
-    }
-
     if (file_exists($path))
     {
         $userInfo = json_decode(file_get_contents($path), true);
-        printUserInfo($userInfo);
+        foreach ($paramNames as $param => $name) {
+            $value = $userInfo[$param] ?? ' ';
+            echo "{$name}: {$value}" . PHP_EOL;
+        }
     }
     else
     {
@@ -39,19 +29,18 @@ function getUserInfoFile($path)
     }
 }
 
-if (isValue('email'))
+$email = getParameter('email');
+if ($email)
 {
-    $email = $_GET['email'];
-    echo 'Entered email: ' . $email . "\n";
-    
+    echo 'Entered email: ' . $email . PHP_EOL;
     if (filter_var($email, FILTER_VALIDATE_EMAIL) && !preg_match('/\//', $email))
     {
         $fileName = $email . '.txt';
-        getUserInfoFile($dataPath . $fileName);
+        getUserInfoFile($dataPath . $fileName, $paramNames);
     }
     else
     {
-        printEmailVerifyErrors();
+        echo 'Uncorrect email!';
     }
 }
 else

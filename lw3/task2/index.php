@@ -1,36 +1,35 @@
 <?php
 header("Content-Type: text/plain");
-
 $pattern_identifier = '/^([a-zA-Z])([a-zA-Z0-9])*$/';
 
-function isValue($str)
+function getParameter($parameter): ?string
 {
-    return (isset($_GET[$str])) && ($_GET[$str] !== '');
+    return $_GET[$parameter] ?? null;
 }
 
-function printVerifyIdentifierErrors($str)
+function printVerifyIdentifierErrors($identifier): void
 {
-    echo 'No. It\'s uncorrect identifier' . "\n";
-    if (preg_match('/[^a-zA-Z0-9]/', $str))
+    if (preg_match('/[^a-zA-Z0-9]/', $identifier))
     {
-        echo "Identifier can contain only latin letters and digits!\n";
+        echo 'Identifier can contain only latin letters and digits!' . PHP_EOL;
     }
-    if (preg_match('/^[0-9]/', $str))
+    if (preg_match('/^[0-9]/', $identifier))
     {
-        echo "Identifier can't start with a digit!\n";
+        echo 'Identifier can\'t start with a digit!' . PHP_EOL;
     }
 }
 
-if (isValue('identifier'))
+$identifier = getParameter('identifier');
+if ($identifier)
 {
-    $identifier = $_GET['identifier'];
-    echo 'Identifier = ' . $identifier . "\n";
+    echo "Identifier = {$identifier}" . PHP_EOL;
     if (preg_match($pattern_identifier, $identifier))
     {
-        echo 'Yes. It\'s good identifier';
+        echo 'Yes. It\'s good identifier' . PHP_EOL;
     }
     else
     {
+        echo 'No. It\'s uncorrect identifier' . PHP_EOL;
         printVerifyIdentifierErrors($identifier);
     }
 }

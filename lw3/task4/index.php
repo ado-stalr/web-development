@@ -1,56 +1,47 @@
 <?php
 header("Content-Type: text/plain");
 $dataPath = 'data/';
+$paramNames = [
+    'first_name' => 'First Name',
+    'last_name' => 'Last Name',
+    'age' => 'Age',
+];
 
-function isValue($str)
+function getParameter($parameter): ?string
 {
-    return (isset($_GET[$str])) && ($_GET[$str] !== '');
+    return $_GET[$parameter] ?? null;
 }
 
-function printEmailVerifyErrors()
+function printIncomingData($email, $paramNames): void
 {
-    echo 'Uncorrect email!';
+    echo "Email: {$email}" . PHP_EOL;
+    foreach ($paramNames as $param => $name) {
+        $value = getParameter($param);
+        echo "{$name}: {$value}" . PHP_EOL;
+    }
 }
 
-function printIncomingData($email)
+$email = getParameter('email');
+if ($email)
 {
-    $first_name = isValue('first_name') ? (string)$_GET['first_name'] : ' ';
-    $last_name = isValue('last_name') ? (string)$_GET['last_name'] : ' ';
-    $age = isValue('age') ? (string)$_GET['age'] : ' ';
-
-    echo "Email: {$email}\n";
-    echo "First Name: {$first_name}\n";
-    echo "Last Name: {$last_name}\n";
-    echo "Age: {$age}\n";
-}
-
-if (isValue('email'))
-{
-    $email = $_GET['email'];
-    printIncomingData($email);
-
+    printIncomingData($email, $paramNames);
     if (filter_var($email, FILTER_VALIDATE_EMAIL) && !preg_match('/\//', $email))
     {
         $userInfo['email'] = $email;
         $fileName = $email . '.txt';
-        if (isValue('first_name'))
-        {
-            $userInfo['first_name'] = (string)$_GET['first_name'];
-        }
-        if (isValue('last_name'))
-        {
-            $userInfo['last_name'] = (string)$_GET['last_name'];
-        }
-        if (isValue('age'))
-        {
-            $userInfo['age'] = (string)$_GET['age'];
+        foreach ($paramNames as $param => $name) {
+            $value = getParameter($param);
+            if ($value)
+            {
+                $userInfo[$param] = $value;
+            }
         }
         file_put_contents($dataPath . $fileName, json_encode($userInfo));
         echo 'Data saved.';
     }
     else
     {
-        printEmailVerifyErrors();
+        echo 'Uncorrect email!';
     }
 }
 else
