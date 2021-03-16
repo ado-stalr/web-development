@@ -1,6 +1,320 @@
-body
+.page
 {
-    background-color: lightyellow;
+    margin: 0;
+}
+
+.page__main
+{
+    margin: 190px auto 0;
+}
+
+.page__footer
+{
+    margin: 70px 0 0;
+}
+
+.header
+{
+    width: 100%;
+}
+
+.nav__list
+{
     margin: 0 auto;
-    max-width: 960px;
+    box-sizing: border-box;
+    max-width: 1000px;
+    padding: 10px 21px 8px;
+    display: flex;
+}
+
+.nav__item
+{
+    list-style-type: none;
+}
+
+.nav__link
+{
+    padding: 17px 22px 14px 45px;
+    text-decoration: none;
+    font: normal 19px/32px Georgia, serif;
+    color: #333333;
+}
+
+.nav__link_about
+{
+    background: url(../images/about_me_icon.png) no-repeat 20px 19px;
+}
+
+.nav__link_hobby
+{
+    background: url(../images/hobby_icon.png) no-repeat 20px 19px;
+}
+
+.nav__link_films
+{
+    background: url(../images/films_icon.png) no-repeat 19px 19px;
+}
+
+.nav__link_active,
+.nav__link:hover
+{
+    color: #f5f5f5;
+    background-color: #15a98c;
+    background-position: 20px -15px;
+    cursor: pointer;
+}
+
+.top-background
+{
+    position: absolute;
+    z-index: -1;
+    background: url(../images/top_background.png) no-repeat center top;
+    width: 100%;
+    height: 400px;
+}
+
+.main
+{
+    max-width: 1200px;  
+}
+
+.main__about
+{
+    margin: 0 70px 74px;
+}
+
+.about
+{
+    padding: 20px;
+    display: flex;
+}
+
+.about__column
+{
+    margin: 0px 32px 0 30px;
+}
+
+.img-frame
+{
+    border-radius: 5px;
+    overflow: hidden;
+    font-size: 0;
+}
+
+.img-frame_avatar
+{
+    width: 330px;
+    height: 350px;
+}
+
+.img-frame_film
+{
+    width: 285px;
+    height: 190px;
+}
+
+.about__avatar
+{
+    position: relative;
+    top: -62px;
+    left: -172px;
+}
+
+.about__favorites
+{
+    margin-top: 46px;
+}
+
+.about__favorites_films
+{
+    margin-top: 42px;
+}
+
+.favorites__title
+{
+    margin: 0 0 12px 0;
+    font: 600 24px/32px "Open Sans", sans-serif;
+    color: #15a98c;
+}
+
+.favorites__list
+{
+    margin: 0;
+    padding: 0 0 0 22px;
+}
+
+.favorites__item
+{
+    font: 19px/36px Georgia, serif;
+    color: #555555;
+}
+
+.quote
+{
+    color: #f5f5f5;
+    font: italic 28px/42px Georgia, serif;
+}
+
+.about__quote
+{
+    margin: 25px 0 81px 2px;
+}
+
+.quote__author
+{
+    font: 600 16px/42px "Open Sans", sans-serif;
+    color: #f5f5f5;
+    margin: 3px 0 0 4px;
+}
+
+.about__name
+{
+    font: 700 48px/42px "Open Sans", sans-serif;
+    color: #333333;
+    margin: 0 0 80px 4px;
+    position: relative;
+}
+
+.about__name::after
+{
+    display: block;
+    content: '';
+    height: 6px;
+    width: 60px;
+    border-radius: 3px;
+    background-color: #45c3aa;
+    position: absolute;
+    top: 73px;
+    left: -6px;
+}
+
+.content
+{
+    max-width: 100%;
+}
+
+.content__title
+{
+    font: 400 36px/42px "Open Sans", sans-serif;
+    color: #333333;
+    margin: 44px 0px 33px 0px;
+}
+
+.content__title_hobby
+{
+    margin: 42px 0px 15px -3px;
+}
+
+.content__discription
+{
+    font: 19px/32px Georgia, serif;
+    color: #555555;
+    margin: 0 0 41px 0;
+}
+
+.contact-me,
+.contact-me__link
+{
+    font: 19px/32px Georgia, serif;
+    color: #15a98b;
+}
+
+.contact-me__link:hover
+{
+    color: #098d72;
+    cursor: pointer;
+}
+
+.films
+{
+    display: flex;
+    margin: 0 -10px 38px;
+}
+
+.films__film
+{
+    margin: 0 10px;
+}
+
+.film__title
+{
+    font: 700 22px/32px "Open Sans", sans-serif;
+    color: #333333;
+    margin: 23px 0 18px;
+}
+
+.film__discription
+{
+    font: 16px/28px Georgia, serif;
+    color: #555555;
+}
+
+.film__screenshot
+{
+    position: relative;
+}
+
+.film__screenshot:hover
+{
+    filter: opacity(80%);
+}
+
+.film__screenshot_shawshank
+{
+    top: 0;
+    left: -73px;
+}
+
+.film__screenshot_awake
+{
+    top: -26px;
+    left: -17px;
+}
+
+.film__screenshot_insidious
+{
+    top: -12px;
+    left: -53px;
+}
+
+.film__screenshot_gravity
+{
+    top: -50px;
+    left: -16px;
+}
+
+.button-wrapper
+{
+    display: flex;
+    justify-content: center;
+}
+
+.button_films
+{
+    text-decoration: none;
+    margin-left: -15px;
+    padding: 8px 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 220px;
+    height: 50px;
+    font: 19px/32px Georgia, serif;
+    background-color: #15a98b;
+    color: #f5f5f5;
+    text-align: center;
+}
+
+.button_films:hover
+{
+    background-color: #098d71;
+    cursor: pointer;
+}
+
+.footer
+{
+    padding: 20px 15px 20px 0;
+    font: 16px/32px Georgia, serif;
+    color: #555555;
+    text-align: center;
+    background-color: #f5f5f5;
 }
