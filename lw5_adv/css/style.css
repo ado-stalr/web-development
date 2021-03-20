@@ -1,41 +1,45 @@
-.page
+.main
 {
     margin: 0;
 }
 
 .header
 {
-    padding: 56px 0;
     display: flex;
     justify-content: space-between;
     max-width: 1170px;
 }
 
-.header__logo
+.logo
 {
-    position: relative;
-    top: -16px;
+    font-size: 0;
 }
 
-.page__header
+.main__header
 {
+    padding: 40px 0 76px;
     margin: 0 auto;
 }
 
-.nav__list
+.header__menu
+{
+    margin: 16px 0;
+}
+
+.menu__list
 {
     margin: 0 -30px;
     padding: 0 0 0;
     display: flex;
 }
 
-.nav__item
+.menu__item
 {
     list-style-type: none;
     margin: 0 27px 0 27px;
 }
 
-.nav__link
+.menu__link
 {
     padding: 30px 2px 30px 2px;
     text-transform: uppercase;
@@ -48,13 +52,13 @@
     position: relative;
 }
 
-.nav__link_active
+.menu__link_active
 {
     color: #e74c3c;
     font-weight: 700;
 }
 
-.nav__link::after
+.menu__link::after
 {
     content: '';
     display: block;
@@ -68,14 +72,14 @@
                 left 0.1s ease-out 0.1s;
 }
 
-.nav__link:hover
+.menu__link:hover
 {
     transition: color 0.2s ease-out;
     color: #e74c3c;
 }
 
-.nav__link:hover::after,
-.nav__link_active::after
+.menu__link:hover::after,
+.menu__link_active::after
 {
     left: 0;
     width: 100%;
@@ -95,7 +99,7 @@
     text-align: center;
 }
 
-.page__promo-slider
+.main__promo-slider
 {
     margin: 155px 0 300px;
 }
@@ -117,13 +121,14 @@
 
 .promo-slider__title
 {
+    padding: 0px 0 0 11px;
     margin: 34px 0 39px 0;
     font: 700 72px/72px "Open Sans", sans-serif;
-    letter-spacing: 7px;
+    letter-spacing: 7.2px;
     color: #f4f5f9;
 }
 
-.promo-slider__discription
+.promo-slider__description
 {
     margin: 37px auto 64px;
     font: 400 14px/24px "Open Sans", sans-serif;
@@ -132,7 +137,7 @@
     text-align: center;
 }
 
-.promo-slider__buttons
+.promo-slider__buttons-block
 {
     display: flex;
     justify-content: center;
@@ -149,7 +154,7 @@
     justify-content: center;
 }
 
-.separator__item
+.separator__line
 {
     margin: 3px 0;
     content: '';
@@ -158,13 +163,14 @@
     height: 2px;
 }
 
-.separator__item_small
+.separator__line_small
 {
     width: 41px;
 }
 
-.separator__item_round
+.separator__round
 {
+    content: '';
     margin: 0 14px;
     background-color: #e74b3b;
     width: 7px;
@@ -199,7 +205,12 @@
 
 .button-down
 {
+    display: block;
     position: relative;
+}
+
+.promo-slider__button-down
+{
     top: 220px;
 }
 
@@ -208,15 +219,15 @@
     max-width: 100%;
 }
 
-.page__advantages
-{
-    max-width: 1230px;
-    margin: 0 auto 106px;
-}
-
 .advantages
 {
     display: flex;
+}
+
+.main__advantages
+{
+    max-width: 1230px;
+    margin: 0 auto 106px;
 }
 
 .advantage
@@ -239,13 +250,13 @@
     text-transform: uppercase;
 }
 
-.advantage__title_theme_isred
+.advantage__title_theme_island
 {
     margin: 14px 0 12px;
     color: #e74c3c;
 }
 
-.advantage__discription
+.advantage__description
 {
     margin: 9px 0 0;
     font: 300 12px/20px "Source Sans Pro", sans-serif;
@@ -256,7 +267,17 @@
 .services
 {
     position: relative;
+}
+
+.main__services
+{
     padding: 144px 0 88px;
+}
+
+.service
+{
+    width: 50%;
+    position: relative;
 }
 
 .services__background
@@ -268,7 +289,7 @@
 
 .services__title
 {
-    transform: translateX(-50%);
+    width: 50%;
     font: 700 36px "Source Sans Pro", sans-serif;
     letter-spacing: 4px;
     text-align: right;
@@ -276,8 +297,9 @@
     margin: 0 0 60px;
 }
 
-.services__vert-line
+.services__title::after
 {
+    content: '';
     display: inline-block;
     background-color: #e74b3b;
     width: 6px;
@@ -288,15 +310,13 @@
 
 .services__item
 {
-    position: relative;
-    transform: translateX(-50%);
     margin: 0 0 53px;
 }
 
 .service__icon
 {
     position: absolute;
-    left: 102%;
+    left: 104%;
     top: 12px;
 }
 
@@ -309,14 +329,13 @@
     text-align: right;
 }
 
-.service__discription
+.service__description
 {
     font: 400 14px/29px "Source Sans Pro", sans-serif;
     color: #999999;
     text-align: right;
     letter-spacing: 0.2px;
 }
-
 
 .button
 {
@@ -331,14 +350,14 @@
     padding: 20px 0;
 }
 
-.button_theme_isred
+.button_theme_island
 {
     color: #ffffff;
     border: 1px solid #e74c3c;
     background-color: #e74c3c;
 }
 
-.button_theme_isred:hover
+.button_theme_island:hover
 {
     background-color: #e5412e;
     border: 1px solid #e5412e;
@@ -367,16 +386,16 @@
     pointer-events: none;
 }
 
-.page__contacts-block
-{
-    padding: 142px 0 150px;
-}
-
 .contacts-block
 {
     background-color: #f3f5f9;
     text-align: center;
     font-size: 0;
+}
+
+.main__contacts-block
+{
+    padding: 142px 0 150px;
 }
 
 .contacts-block__title
@@ -388,7 +407,7 @@
     filter: drop-shadow(0px 1px 0px #ffffff);
 }
 
-.contacts-block__discription
+.contacts-block__description
 {
     font: 400 14px/21px "Open Sans", sans-serif;
     color: #999999;
@@ -426,7 +445,7 @@
     color: #e74e3e;
 }
 
-.contacts__discription
+.contacts__description
 {
     font: 400 18px/24px "Open Sans", sans-serif;
     color: #999999;
@@ -454,11 +473,17 @@
     margin: 0 0 2px;
     display: block;
     border: 0px;
+    border-radius: 1px;
     border-bottom: #ececec solid 1px;
     width: 100%;
     font: 600 14px/25px "Open Sans", sans-serif;
     color: #999999;
     padding: 17px 0;
+}
+
+.contacts-form__input:hover
+{
+    border-color: #e74e3e;
 }
 
 .contacts-form__input_area
@@ -468,6 +493,7 @@
 
 .contacts-form__button
 {
+    cursor: pointer;
     margin-top: 30px;
     width: 155px;
     height: 44px;
@@ -478,8 +504,12 @@
 .promo-banner
 {
     position: relative;
-    padding: 150px 30px 135px 0;
     text-align: center;
+}
+
+.main__promo-banner
+{
+    padding: 150px 30px 135px 0;
 }
 
 .promo-banner__background
@@ -502,7 +532,7 @@
     font-weight: bold;
 }
 
-.promo-banner__discription
+.promo-banner__description
 {
     margin: 0 0 63px;
     font: 400 18px/36px "Open Sans", sans-serif;
@@ -513,8 +543,8 @@
 .promo-banner__button
 {
     display: inline-block;
+    transform: translateX(13px);
 }
-
 
 .footer
 {
@@ -523,19 +553,13 @@
     padding: 35px 0;
 }
 
-.footer__wrapper
+.footer__container
 {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     max-width: 1170px;
     vertical-align: middle;
-}
-
-.wrapper_button
-{
-    display: flex;
-    justify-content: center;
 }
 
 .socials

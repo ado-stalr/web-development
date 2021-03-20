@@ -1,36 +1,46 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OWP LabWork 5</title>
-    <link href="css/style.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
-  </head>
-  <body class="page">
-    <header class="header">
-      <nav class="nav">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a href="#about" class="nav__link nav__link_about nav__link_active">Обо мне</a>
-          </li>
-          <li class="nav__item">
-            <a href="#hobby" class="nav__link nav__link_hobby">Мое хобби</a>
-          </li>
-          <li class="nav__item">
-            <a href="#favorite-films" class="nav__link nav__link_films">Любимые фильмы</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <div class="top-background"></div>
-    <main class="main page__main">
-      <div class="about main__about" id="about">
-        <div class="column about__column">
-          <div class="about__img-frame img-frame img-frame_avatar">
-            <img src="images/avatar.png" alt="avatar" class="avatar about__avatar" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OWP LabWork 5</title>
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body class="main">
+  <header class="header">
+    <nav class="menu header__menu">
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a href="#about" class="menu__link menu__link_about menu__link_active">Обо мне</a>
+        </li>
+        <li class="menu__item">
+          <a href="#hobby" class="menu__link menu__link_hobby">Мое хобби</a>
+        </li>
+        <li class="menu__item">
+          <a href="#favorite-films" class="menu__link menu__link_films">Любимые фильмы</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div class="background"></div>
+  <div class="profile main__profile" >
+    <div class="about profile__about" id="about">
+      <div class="about__row">
+        <div class="about__img-frame img-frame img-frame_avatar">
+          <img src="images/avatar.png" alt="avatar" class="avatar about__avatar" />
+        </div>
+        <div class="about__column">
+          <div class="quote about__quote">
+            Мы берем на себя много, потому что мало чего боимся
+            <p class="quote__author">— Том Демарко. Deadline</p>
           </div>
-          <div class="favorites about__favorites">
+          <h1 class="about__name">Jane Doe</h1>
+        </div>
+      </div>
+      <div class="about__row">
+        <div class="about__column about__column_left">
+          <div class="favorites about__favorites about__favorites_writers">
             <h3 class="favorites__title">Любимые писатели:</h3>
             <ul class="favorites__list">
               <li class="favorites__item">Айзек Азимов</li>
@@ -49,24 +59,17 @@
             </ol>
           </div>
         </div>
-        <div class="column about__column">
-          <div class="quote about__quote">
-            Мы берем на себя много, потому что мало чего боимся
-            <p class="quote__author">— Том Демарко. Deadline</p>
+        <div class="about__column">
+          <div class="bio about__bio" id="bio">
+            В 1930-е годы прошлого века физик Джордж Гамоу из
+            университета штата Колорадо начал публиковать <br />
+            мини-сериал рассказов о неком мистере Томпкинсе, банковском
+            клерке средних лет. Мистер Томпкинс, как явствовало из этих
+            историй, интересовался современной наукой.
           </div>
-          <h1 class="about__name">Jane Doe</h1>
-          <div class="content" id="bio">
-            <div class="content__discription">
-              В 1930-е годы прошлого века физик Джордж Гамоу из
-              университета штата Колорадо начал публиковать <br />
-              мини-сериал рассказов о неком мистере Томпкинсе, банковском
-              клерке средних лет. Мистер Томпкинс, как явствовало из этих
-              историй, интересовался современной наукой.
-            </div>
-          </div>
-          <div class="content" id="hobby">
-            <h2 class="content__title content__title_hobby">Моё хобби</h2>
-            <p class="content__discription">
+          <div class="hobby about__hobby" id="hobby">
+            <h2 class="hobby__title">Моё хобби</h2>
+            <p class="hobby__description">
               Он регулярно посещал вечерние лекции местного профессора и,
               разумеется, всегда засыпал на самом интересном месте. <br />
               А когда просыпался, то обнаруживал себя в каком-нибудь
@@ -79,76 +82,77 @@
           </div>
         </div>
       </div>
-      <div class="content" id="favorite-films">
-        <h2 class="content__title">Любимые фильмы</h2>
-        <div class="films">
-          <div class="film films__film">
-            <div class="img-frame img-frame_film">
-              <img src="images/shawshank_redemption.png" alt="Побег из шоушенка" class="film__screenshot film__screenshot_shawshank" />
-            </div>
-            <h3 class="film__title">Побег из Шоушенка</h3>
-            <p class="film__discription">
-              Успешный банкир Энди Дюфрейн обвинен в убийстве собственной
-              жены и ее любовника. Оказавшись в тюрьме под названием Шоушенк,
-              он сталкивается с жестокостью и беззаконием, царящими по
-              обе стороны решетки. Каждый, кто попадает в эти стены,
-              становится их рабом до конца жизни. Но Энди, вооруженный
-              живым умом и доброй душой, отказывается мириться с
-              приговором судьбы и начинает разрабатывать невероятно
-              дерзкий план своего освобождения.
-            </p>
+    </div>
+    <div class="favorite-films profile__favorite-films" id="favorite-films">
+      <h2 class="favorite-films__title">Любимые фильмы</h2>
+      <div class="films">
+        <div class="film films__film">
+          <div class="img-frame img-frame_film">
+            <img src="images/shawshank_redemption.png" alt="Побег из шоушенка" class="film__screenshot film__screenshot_shawshank" />
           </div>
-          <div class="film films__film">
-            <div class="img-frame img-frame_film">
-              <img src="images/awake.png" alt="Наркоз" class="film__screenshot film__screenshot_awake" />
-            </div>
-            <h3 class="film__title">Наркоз</h3>
-            <p class="film__discription">
-              Клай Бересфорд вынужден лечь под нож. Однако в процессе операции
-              на сердце он неожиданно приходит в себя. Находясь в парализованном
-              состоянии, будучи не в силах пошевелить ни рукой, ни ногой, он,
-              тем не менее, чувствует каждое касание скальпеля к своей плоти…
-            </p>
-          </div>
-          <div class="film films__film">
-            <div class="img-frame img-frame_film">
-              <img src="images/insidious.png" alt="Астрал" class="film__screenshot film__screenshot_insidious" />
-            </div>
-            <h3 class="film__title">Астрал</h3>
-            <p class="film__discription">
-              Джош и Рене переезжают со своими детьми в новый дом, но
-              не успевают толком распаковать вещи, как начинаются странные
-              события. Необъяснимо перемещаются предметы, в детской звучат
-              странные звуки… Но в настоящий ужас приходят родители, когда
-              их десятилетний сын Далтон впадает в кому. Все усилия врачей
-              в больнице помочь мальчику безуспешны.
-            </p>
-          </div>
-          <div class="film films__film">
-            <div class="img-frame img-frame_film">
-              <img src="images/gravity.png" alt="Гравитация" class="film__screenshot film__screenshot_gravity" />
-            </div>
-            <h3 class="film__title">Гравитация</h3>
-            <p class="film__discription">
-              Доктор Райан Стоун, блестящий специалист в области медицинского
-              инжиниринга, отправляется в свою первую космическую миссию под
-              командованием ветерана астронавтики Мэтта Ковальски, для которого
-              этот полет — последний перед отставкой. Но во время, казалось бы,
-              рутинной работы за бортом случается катастрофа. Шаттл уничтожен, а
-              Стоун и Ковальски остаются совершенно одни; они находятся в связке
-              друг с другом, и все, что они могут, — это двигаться по орбите в
-              абсолютно черном пространстве без всякой связи с Землей и
-              какой-либо надежды на спасение.
-            </p>
-          </div>
+          <h3 class="film__title">Побег из Шоушенка</h3>
+          <p class="film__description">
+            Успешный банкир Энди Дюфрейн обвинен в убийстве собственной
+            жены и ее любовника. Оказавшись в тюрьме под названием Шоушенк,
+            он сталкивается с жестокостью и беззаконием, царящими по
+            обе стороны решетки. Каждый, кто попадает в эти стены,
+            становится их рабом до конца жизни. Но Энди, вооруженный
+            живым умом и доброй душой, отказывается мириться с
+            приговором судьбы и начинает разрабатывать невероятно
+            дерзкий план своего освобождения.
+          </p>
         </div>
-        <div class="button-wrapper">
-          <a href='#' class="button button_films">Все фильмы</a>
+        <div class="film films__film">
+          <div class="img-frame img-frame_film">
+            <img src="images/awake.png" alt="Наркоз" class="film__screenshot film__screenshot_awake" />
+          </div>
+          <h3 class="film__title">Наркоз</h3>
+          <p class="film__description">
+            Клай Бересфорд вынужден лечь под нож. Однако в процессе операции
+            на сердце он неожиданно приходит в себя. Находясь в парализованном
+            состоянии, будучи не в силах пошевелить ни рукой, ни ногой, он,
+            тем не менее, чувствует каждое касание скальпеля к своей плоти…
+          </p>
+        </div>
+        <div class="film films__film">
+          <div class="img-frame img-frame_film">
+            <img src="images/insidious.png" alt="Астрал" class="film__screenshot film__screenshot_insidious" />
+          </div>
+          <h3 class="film__title">Астрал</h3>
+          <p class="film__description">
+            Джош и Рене переезжают со своими детьми в новый дом, но
+            не успевают толком распаковать вещи, как начинаются странные
+            события. Необъяснимо перемещаются предметы, в детской звучат
+            странные звуки… Но в настоящий ужас приходят родители, когда
+            их десятилетний сын Далтон впадает в кому. Все усилия врачей
+            в больнице помочь мальчику безуспешны.
+          </p>
+        </div>
+        <div class="film films__film">
+          <div class="img-frame img-frame_film">
+            <img src="images/gravity.png" alt="Гравитация" class="film__screenshot film__screenshot_gravity" />
+          </div>
+          <h3 class="film__title">Гравитация</h3>
+          <p class="film__description">
+            Доктор Райан Стоун, блестящий специалист в области медицинского
+            инжиниринга, отправляется в свою первую космическую миссию под
+            командованием ветерана астронавтики Мэтта Ковальски, для которого
+            этот полет — последний перед отставкой. Но во время, казалось бы,
+            рутинной работы за бортом случается катастрофа. Шаттл уничтожен, а
+            Стоун и Ковальски остаются совершенно одни; они находятся в связке
+            друг с другом, и все, что они могут, — это двигаться по орбите в
+            абсолютно черном пространстве без всякой связи с Землей и
+            какой-либо надежды на спасение.
+          </p>
         </div>
       </div>
-    </main>
-    <footer class="footer page__footer">
-      © 2006-2018 Поволжский государственный технологический университет, ФГБОУ ВО «ПГТУ»
-    </footer>
-  </body>
+      <div class="button-container">
+        <a href='#' class="button button_films">Все фильмы</a>
+      </div>
+    </div>
+  </div>
+  <footer class="footer main__footer">
+    © 2006-2018 Поволжский государственный технологический университет, ФГБОУ ВО «ПГТУ»
+  </footer>
+</body>
 </html>
