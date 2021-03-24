@@ -1,0 +1,363 @@
+.main
+{
+    margin: 0 ;
+}
+
+.main__profile
+{
+    margin: 190px auto 0;
+    padding: 0 20px;
+}
+
+.profile
+{
+    max-width: 1200px;
+}
+
+.header
+{
+    width: 100%;
+}
+
+.menu
+{
+    box-sizing: border-box;
+    max-width: 1000px;
+}
+
+.header__menu
+{
+    margin: 0 auto;
+}
+
+.menu__list
+{
+    font-size: 0;
+    margin: 0;
+    padding: 10px 21px 8px;
+}
+
+.menu__item
+{
+    display: inline-block;
+    list-style-type: none;
+}
+
+.menu__link
+{
+    padding: 17px 22px 14px 45px;
+    text-decoration: none;
+    font: normal 19px/32px Georgia, serif;
+    color: #333333;
+}
+
+.menu__link_about
+{
+    background: url(../images/about_me_icon.png) no-repeat 20px 19px;
+}
+
+.menu__link_hobby
+{
+    background: url(../images/hobby_icon.png) no-repeat 20px 19px;
+}
+
+.menu__link_films
+{
+    background: url(../images/films_icon.png) no-repeat 19px 19px;
+}
+
+.menu__link_active,
+.menu__link:hover
+{
+    color: #f5f5f5;
+    background-color: #15a98c;
+    background-position: 20px -15px;
+    cursor: pointer;
+}
+
+.background
+{
+    position: absolute;
+    z-index: -1;
+    background: url(../images/top_background.png) no-repeat center top;
+    width: 100%;
+    height: 400px;
+}
+
+.profile__about
+{
+    margin: 17px auto 0;
+}
+
+.about
+{
+    padding: 20px 0;
+    box-sizing: border-box;
+    max-width: 1020px;
+}
+
+.img-frame
+{
+    border-radius: 5px;
+    overflow: hidden;
+    font-size: 0;
+}
+
+.img-frame_avatar
+{
+    margin: 0 63px 0 30px;
+    float: left;
+    width: 330px;
+    height: 350px;
+}
+
+.img-frame_film
+{
+    width: 285px;
+    height: 190px;
+}
+
+.about__avatar
+{
+    position: relative;
+    top: -62px;
+    left: -172px;
+}
+
+.favorites
+{
+    width: 350px;
+}
+
+.about__favorites_writers
+{
+    float: left;
+    margin: 45px 40px 0 30px;
+}
+
+.about__favorites_films
+{
+    float: left;
+    margin: 33px 40px 60px 30px;
+}
+
+.favorites__title
+{
+    margin: 0 0 12px 0;
+    font: 600 24px/32px "Open Sans", sans-serif;
+    color: #15a98c;
+}
+
+.favorites__list
+{
+    margin: 0;
+    padding: 0 0 0 22px;
+}
+
+.favorites__item
+{
+    font: 19px/36px Georgia, serif;
+    color: #555555;
+}
+
+.quote
+{
+    color: #f5f5f5;
+    font: italic 28px/42px Georgia, serif;
+}
+
+.about__quote
+{
+    margin: 25px 25px 81px 2px;
+}
+
+.quote__author
+{
+    font: 600 16px/42px "Open Sans", sans-serif;
+    color: #f5f5f5;
+    margin: 3px 0 0 4px;
+}
+
+.about__name
+{
+    font: 700 48px/42px "Open Sans", sans-serif;
+    color: #333333;
+    margin: 0 0 50px 0;
+    position: relative;
+}
+
+.about__name::after
+{
+    display: inline-block;
+    content: '';
+    height: 6px;
+    width: 60px;
+    border-radius: 3px;
+    background-color: #45c3aa;
+    position: relative;
+    top: 40px;
+    left: -213px;
+}
+
+.bio
+{
+    font: 19px/32px Georgia, serif;
+    color: #555555;
+}
+
+.about__bio
+{
+    margin: 8px 40px 42px 0;
+}
+
+.about__hobby
+{
+    margin: 0;
+}
+
+.hobby__title
+{
+    font: 400 36px/42px "Open Sans", sans-serif;
+    color: #333333;
+    margin: 0 0 15px -2px;
+}
+
+.hobby__description
+{
+    font: 19px/32px Georgia, serif;
+    color: #555555;
+    margin: 0 40px 41px 0;
+}
+
+.contact-me,
+.contact-me__link
+{
+    font: 19px/32px Georgia, serif;
+    color: #15a98b;
+}
+
+.contact-me__link:hover
+{
+    color: #098d72;
+    cursor: pointer;
+}
+
+.profile__favorite-films
+{
+    margin: 73px 0 0 0;
+}
+
+.favorite-films__title
+{
+    font: 400 36px/42px "Open Sans", sans-serif;
+    color: #333333;
+    margin: 0 0 33px 0;
+}
+
+.films
+{
+    margin: 0 -10px 38px;
+}
+
+.films__film
+{
+    width: 285px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 8px;
+}
+
+.film__title
+{
+    font: 700 22px/32px "Open Sans", sans-serif;
+    color: #333333;
+    margin: 23px 0 18px;
+}
+
+.film__description
+{
+    font: 16px/28px Georgia, serif;
+    color: #555555;
+}
+
+.film__screenshot
+{
+    position: relative;
+    transition: transform 0.5s ease 0.1s;
+}
+
+.film__screenshot:hover
+{
+    filter: opacity(80%);
+    transform: scale(1.1);
+}
+
+.film__screenshot_shawshank
+{
+    top: 0;
+    left: -73px;
+}
+
+.film__screenshot_awake
+{
+    top: -26px;
+    left: -17px;
+}
+
+.film__screenshot_insidious
+{
+    top: -12px;
+    left: -53px;
+}
+
+.film__screenshot_gravity
+{
+    top: -50px;
+    left: -16px;
+}
+
+.button-container
+{
+    text-align: center;
+}
+
+.button_films
+{
+    display: inline-block;
+    text-decoration: none;
+    margin-left: -18px;
+    padding: 8px 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 220px;
+    height: 50px;
+    font: 19px/32px Georgia, serif;
+    background-color: #15a98b;
+    color: #f5f5f5;
+    text-align: center;
+}
+
+.button_films:hover
+{
+    background-color: #098d71;
+    cursor: pointer;
+}
+
+.footer
+{
+    font: 16px/32px Georgia, serif;
+    color: #555555;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+.main__footer
+{
+    margin: 70px 0 0;
+    padding: 20px 15px 20px 0;
+}
+
+.clear
+{
+    clear: both;
+}
