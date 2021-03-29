@@ -111,7 +111,7 @@
     height: 990px;
 }
 
-.promo-slider__subtitle
+.promo-slider__slogan
 {
     margin: 0 0 0 0;
     font: 400 24px/24px "Source Sans Pro", sans-serif;
@@ -479,6 +479,8 @@
 .contacts-form__input
 {
     margin: 0 0 3px;
+    padding: 16px 0 15.5px;
+    outline: none;
     display: block;
     border: 0px;
     border-radius: 1px;
@@ -486,10 +488,10 @@
     width: 100%;
     font: 600 14px/25px "Open Sans", sans-serif;
     color: #999999;
-    padding: 16px 0 15.5px;
 }
 
-.contacts-form__input:hover
+.contacts-form__input:hover,
+.contacts-form__input:focus
 {
     border-color: #e74e3e;
 }
