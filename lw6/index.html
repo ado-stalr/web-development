@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
+  <title>OWP LabWork 6</title>
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body class="main">
+  <header class="header">
+    <div class="burger-button burger-button" id="menu_button">
+      <div class="burger-button__line burger-button__line_top"></div>
+      <div class="burger-button__line burger-button__line_mid"></div>
+      <div class="burger-button__line burger-button__line_bottom"></div>
+    </div>
+    <nav class="menu menu_hidden header__menu" id="menu">
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a href="#about" class="menu__link menu__link_about menu__link_active">Обо мне</a>
+        </li>
+        <li class="menu__item">
+          <a href="#hobby" class="menu__link menu__link_hobby">Мое хобби</a>
+        </li>
+        <li class="menu__item">
+          <a href="#favorite-films" class="menu__link menu__link_films">Любимые фильмы</a>
+        </li>
+        <li class="clear"></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="background"></div>
+  <div class="profile main__profile" >
+    <div class="about profile__about" id="about">
+      <div class="about__img-frame img-frame img-frame_avatar">
+        <img src="images/avatar.png" alt="avatar" class="avatar about__avatar" />
+      </div>
+      <div class="about__header">
+        <div class="quote about__quote">
+          Мы берем на себя много, потому что мало чего боимся
+          <p class="quote__author">— Том Демарко. Deadline</p>
+        </div>
+        <h1 class="about__name">Jane Doe</h1>
+      </div>
+      <div class="clear"></div>
+      <div class="about__info">
+        <div class="favorites about__favorites">
+          <div class="favorites__writers">
+            <h3 class="favorites__title">Любимые писатели:</h3>
+            <ul class="favorites__list">
+              <li class="favorites__item">Айзек Азимов</li>
+              <li class="favorites__item">Говард Лавкрафт</li>
+              <li class="favorites__item">Дмитрий Глуховский</li>
+              <li class="favorites__item">Чак Паланик</li>
+            </ul>
+          </div>
+          <div class="favorites__films">
+            <h3 class="favorites__title">Любимые фильмы:</h3>
+            <ol class="favorites__list">
+              <li class="favorites__item">Шоу Трумэна</li>
+              <li class="favorites__item">Малхолланд Драйв</li>
+              <li class="favorites__item">Семь жизней</li>
+              <li class="favorites__item">Гравитация</li>
+            </ol>
+          </div>
+        </div>
+        <div class="bio about__bio" id="bio">
+          В 1930-е годы прошлого века физик Джордж Гамоу из
+          университета штата Колорадо начал публиковать <br />
+          мини-сериал рассказов о неком мистере Томпкинсе, банковском
+          клерке средних лет. Мистер Томпкинс, как явствовало из этих
+          историй, интересовался современной наукой.
+        </div>
+        <div class="hobby about__hobby" id="hobby">
+          <h2 class="hobby__title">Моё хобби</h2>
+          <p class="hobby__description">
+            Он регулярно посещал вечерние лекции местного профессора и,
+            разумеется, всегда засыпал на самом интересном месте. <br />
+            А когда просыпался, то обнаруживал себя в каком-нибудь
+            параллельном мире, где один из основных законов физики
+            действовал не так, как в его мире.
+          </p>
+        </div>
+        <div class="contact-me about__contact-me">
+          <a href="#write-me" class="contact-me__link">Напиши мне</a> →
+        </div>
+        <div class="clear"></div>
+      </div>
+        
+    </div>
+  </div>
+  <div class="favorite-films main__favorite-films" id="favorite-films">
+    <div class="favorite-films__container">
+      <h2 class="favorite-films__title">Любимые фильмы</h2>
+      <div class="films">
+        <div class="film films__film">
+          <div class="img-frame img-frame_film">
+            <img src="images/shawshank_redemption.png" alt="Побег из шоушенка" class="film__screenshot film__screenshot_shawshank" />
+          </div>
+          <h3 class="film__title">Побег из Шоушенка</h3>
+          <p class="film__description">
+            Успешный банкир Энди Дюфрейн обвинен в убийстве собственной
+            жены и ее любовника. Оказавшись в тюрьме под названием Шоушенк,
+            он сталкивается с жестокостью и беззаконием, царящими по
+            обе стороны решетки. Каждый, кто попадает в эти стены,
+            становится их рабом до конца жизни. Но Энди, вооруженный
+            живым умом и доброй душой, отказывается мириться с
+            приговором судьбы и начинает разрабатывать невероятно
+            дерзкий план своего освобождения.
+          </p>
+        </div>
+        <div class="film films__film">
+          <div class="img-frame img-frame_film">
+            <img src="images/awake.png" alt="Наркоз" class="film__screenshot film__screenshot_awake" />
+          </div>
+          <h3 class="film__title">Наркоз</h3>
+          <p class="film__description">
+            Клай Бересфорд вынужден лечь под нож. Однако в процессе операции
+            на сердце он неожиданно приходит в себя. Находясь в парализованном
+            состоянии, будучи не в силах пошевелить ни рукой, ни ногой, он,
+            тем не менее, чувствует каждое касание скальпеля к своей плоти…
+          </p>
+        </div>
+        <div class="film films__film">
+          <div class="img-frame img-frame_film">
+            <img src="images/insidious.png" alt="Астрал" class="film__screenshot film__screenshot_insidious" />
+          </div>
+          <h3 class="film__title">Астрал</h3>
+          <p class="film__description">
+            Джош и Рене переезжают со своими детьми в новый дом, но
+            не успевают толком распаковать вещи, как начинаются странные
+            события. Необъяснимо перемещаются предметы, в детской звучат
+            странные звуки… Но в настоящий ужас приходят родители, когда
+            их десятилетний сын Далтон впадает в кому. Все усилия врачей
+            в больнице помочь мальчику безуспешны.
+          </p>
+        </div>
+        <div class="film films__film">
+          <div class="img-frame img-frame_film">
+            <img src="images/gravity.png" alt="Гравитация" class="film__screenshot film__screenshot_gravity" />
+          </div>
+          <h3 class="film__title">Гравитация</h3>
+          <p class="film__description">
+            Доктор Райан Стоун, блестящий специалист в области медицинского
+            инжиниринга, отправляется в свою первую космическую миссию под
+            командованием ветерана астронавтики Мэтта Ковальски, для которого
+            этот полет — последний перед отставкой. Но во время, казалось бы,
+            рутинной работы за бортом случается катастрофа. <br />
+            Шаттл уничтожен, а Стоун и Ковальски остаются 
+            совершенно одни; они находятся в связке
+            друг с другом, и все, что они могут, — это двигаться по орбите в
+            абсолютно черном пространстве без всякой связи с Землей и
+            какой-либо надежды на спасение.
+          </p>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="button-container">
+        <a href='#' class="button button_films">Все фильмы</a>
+      </div>
+    </div>
+  </div>
+  <div class="write-me main__write-me" id="write-me">
+    <h2 class="write-me__title">напиши мне</h2>
+    <form class="write-me__form write-me-form" action="https://echo.htmlacademy.ru/courses" method="get">
+      <label for="name" class="write-me-form__label write-me-form__label_required">Ваше имя</label>
+      <input type="text" id="name" name="name" class="write-me-form__input" required />
+      <label for="email" class="write-me-form__label write-me-form__label_required">Ваш email</label>
+      <input type="email" id="email" name="email" class="write-me-form__input" required />
+      <label for="location" class="write-me-form__label write-me-form__label_select">Откуда вы?</label>
+      <select name="location" id="location" class="write-me-form__input write-me-form__input_select">
+        <option value="ru">Россия</option>
+        <option value="ua">Украина</option>
+        <option value="bl">Беларусь</option>
+        <option value="us">США</option>
+      </select>
+      <div class="write-me-form__gender">
+        <div class="write-me-form__text">Ваш пол</div>
+        <label class="write-me-form__label write-me-form__label_radio">
+          <input type="radio" class="write-me-form__radio" name="gender" value="man" checked>
+          Мужской
+        </label>
+        <label class="write-me-form__label write-me-form__label_radio">
+          <input type="radio" class="write-me-form__radio write-me-form__radio_woman" name="gender" value="woman">
+          Женский
+        </label>
+      </div>
+      <label for="message" class="write-me-form__label write-me-form__label_required">Ваше сообщение</label>
+      <textarea id="message" name="message" class="write-me-form__input write-me-form__input_area" required></textarea>
+      <input type="submit" class="write-me-form__button button" value="Отправить" />
+    </form>
+  </div>
+  <footer class="footer main__footer">
+    © 2006-2018 Поволжский государственный технологический университет, ФГБОУ ВО «ПГТУ»
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

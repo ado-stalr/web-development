@@ -1,0 +1,970 @@
+.main
+{
+    margin: 0 ;
+}
+
+.main_without-overflow
+{
+    overflow: hidden;
+}
+
+.header
+{
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    background-color: #ffffff;
+}
+
+.menu
+{
+    box-sizing: border-box;
+    max-width: 1000px;
+    overflow: hidden;
+}
+
+.burger-button
+{
+    cursor: pointer;
+    height: 25px;
+    position: relative;
+    transition: all 0.4s ease 0;
+    width: 25px;
+    z-index: 10;
+    padding: 10px;
+}
+
+.burger-button__line
+{
+    background-color: #000000;
+    position: absolute;
+    height: 2px;
+    width: 25px;
+    transition: all .4s ease;
+}
+
+.burger-button__line_top
+{
+    top: 13px;
+}
+
+.burger-button__line_mid
+{
+    top: 21px;
+}
+
+.burger-button__line_bottom
+{
+    top: 29px;
+}
+
+.burger-button:hover .burger-button__line_mid
+{
+    width: 18px;
+}
+
+.burger-button_active .burger-button__line_top
+{
+    top: 21px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.burger-button_active .burger-button__line_mid
+{
+    opacity: 0
+}
+
+.burger-button_active .burger-button__line_bottom
+{
+    top: 21px;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg)
+}
+
+.header__menu
+{
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.menu_hidden
+{
+    display: none;
+}
+
+.menu__list
+{
+    font-size: 0;
+    margin: 0;
+    padding: 0 20px;
+}
+
+.menu__item
+{
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+.menu__link
+{
+    display: block;
+    padding: 9px 22px 9px 45px;
+    text-decoration: none;
+    font: normal 19px/32px Georgia, serif;
+    color: #333333;
+}
+
+.menu__link_about
+{
+    background: url(../images/about_me_icon.png) no-repeat 20px 19px;
+}
+
+.menu__link_hobby
+{
+    background: url(../images/hobby_icon.png) no-repeat 20px 19px;
+}
+
+.menu__link_films
+{
+    background: url(../images/films_icon.png) no-repeat 19px 19px;
+}
+
+.menu__link_active,
+.menu__link:hover
+{
+    color: #f5f5f5;
+    background-color: #15a98c;
+    background-position: 20px -16px;
+    cursor: pointer;
+}
+
+.background
+{
+    position: absolute;
+    top: 50px;
+    z-index: -1;
+    background: url(../images/top_background.png) no-repeat center top;
+    width: 100%;
+    height: 400px;
+}
+
+.profile
+{
+    max-width: 1200px;
+}
+
+.profile__about
+{
+    margin: 45px 0 0;
+}
+
+.about
+{
+    padding: 25px 10px;
+    box-sizing: border-box;
+    max-width: 1024px;
+}
+
+.about__header
+{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.img-frame
+{
+    border-radius: 5px;
+    overflow: hidden;
+    font-size: 0;
+}
+
+.img-frame_avatar
+{
+    margin: 0 auto 50px;
+    max-width: 400px;
+    height: 350px;
+}
+
+.img-frame_film
+{
+    margin: 0 auto;
+    max-width: 400px;
+    height: 190px;
+}
+
+.about__avatar
+{
+    position: relative;
+    top: -62px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.quote
+{
+    color: #333333;
+    font: italic 30px/42px Georgia, serif;
+}
+
+.about__quote
+{
+    margin: 20px 20px;
+}
+
+.quote__author
+{
+    font: 600 20px/42px "Open Sans", sans-serif;
+    color: #333333;
+    margin: 3px 0 0 4px;
+}
+
+.about__name
+{
+    text-align: center;
+    font: 700 48px/42px "Open Sans", sans-serif;
+    color: #333333;
+    margin: 0 0 20px 0;
+    position: relative;
+}
+
+.about__name::after
+{
+    display: inline-block;
+    content: '';
+    height: 6px;
+    width: 60px;
+    border-radius: 3px;
+    background-color: #45c3aa;
+    position: absolute;
+    top: 65px;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+.about__info
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.favorites
+{
+    order: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.favorites__writers,
+.favorites__films
+{
+    margin: 10px 0;
+}
+
+.favorites__writers
+{
+    margin-right: 20px;
+}
+.favorites__title
+{
+    margin: 0 0 12px 0;
+    font: 600 26px/32px "Open Sans", sans-serif;
+    color: #15a98c;
+}
+
+.favorites__list
+{
+    margin: 0;
+    padding: 0 0 0 22px;
+}
+
+.favorites__item
+{
+    font: 21px/36px Georgia, serif;
+    color: #555555;
+}
+
+.bio
+{
+    font: 22px/38px Georgia, serif;
+    color: #555555;
+}
+
+.about__bio
+{
+    margin: 8px 0 42px 0;
+}
+
+.about__hobby
+{
+    margin: 0;
+}
+
+.hobby__title
+{
+    font: 400 34px/42px "Open Sans", sans-serif;
+    color: #333333;
+    margin: 0 0 15px -2px;
+}
+
+.hobby__description
+{
+    font: 24px/36px Georgia, serif;
+    color: #555555;
+    margin: 0 0 41px 0;
+}
+
+.about__contact-me
+{
+    margin: 0 0 40px 0;
+}
+
+.contact-me,
+.contact-me__link
+{
+    text-align: center;
+    font: 24px/38px Georgia, serif;
+    color: #15a98b;
+}
+
+.contact-me__link:hover
+{
+    color: #098d72;
+    cursor: pointer;
+}
+
+.main__favorite-films
+{
+    background-color: #f9f9f9;
+    margin: 0 0 0 0;
+    padding: 20px 10px 30px;
+}
+
+.favorite-films__title
+{
+    font: 400 36px/42px "Open Sans", sans-serif;
+    color: #333333;
+    margin: 0 0 33px 0;
+    padding: 0 0 0 10px;
+}
+
+.favorite-films__container
+{
+    margin: 0;
+}
+
+.films__film
+{
+    margin: 0 10px 30px;
+}
+
+.film__title
+{
+    font: 700 24px/32px "Open Sans", sans-serif;
+    color: #333333;
+    margin: 15px 0 10px;
+}
+
+.film__description
+{
+    font: 18px/28px Georgia, serif;
+    color: #555555;
+    margin: 0;
+}
+
+.film__screenshot
+{
+    position: relative;
+    transition: transform 0.2s ease;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.film__screenshot:hover
+{
+    filter: opacity(80%);
+    transform: translate(-50%, -50%)
+               scale(1.1);
+}
+
+.button-container
+{
+    margin: 20px 0 0 0;
+    text-align: center;
+}
+
+.button
+{
+    text-decoration: none;
+    padding: 8px 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 0;
+    width: 220px;
+    height: 50px;
+    font: 19px/32px Georgia, serif;
+    background-color: #15a98b;
+    color: #f5f5f5;
+    text-align: center;
+}
+
+.button_films
+{
+    display: inline-block;
+}
+
+.button:hover
+{
+    background-color: #098d71;
+    cursor: pointer;
+}
+
+.main__write-me
+{
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.write-me
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.write-me__title
+{
+    padding: 0;
+    margin: 30px 0 40px 0;
+    text-transform: uppercase;
+    font: 300 36px/30px "Open Sans", sans-serif;
+    letter-spacing: -0.8px;
+    color: #333333;
+}
+
+.write-me-form
+{
+    width: 100%;
+}
+
+.write-me-form__input
+{
+    margin: 3px 0 15px;
+    padding: 7px 19px;
+    outline: none;
+    display: block;
+    border-radius: 3px;
+    border: #c9c9c9 solid 2px;
+    box-sizing: border-box;
+    width: 100%;
+    font: 400 18px/32px "Open Sans", sans-serif;
+    color: #555555;
+}
+
+.write-me-form__input:hover,
+.write-me-form__input:focus
+{
+    border-color: #15a98c;
+}
+
+.write-me-form__label
+{
+    display: block;
+    font: 400 20px/32px "Open Sans", sans-serif;
+    color: #333333;
+    cursor: pointer;
+}
+
+.write-me-form__text
+{
+    display: block;
+    font: 400 20px/32px "Open Sans", sans-serif;
+    color: #333333;
+    margin: 0 0 4px 0;
+    letter-spacing: 0;
+}
+
+.write-me-form__label_select
+{
+    margin: 15px 0 0 0;
+}
+
+.write-me-form__label_required::after
+{
+    content: ' *';
+    color: #ee0707;
+}
+
+.write-me-form__input_select
+{
+    margin: 2px 0 15px 0;
+    padding: 7px 20px 7px 17px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    background: url(../images/arrow_down.png) no-repeat 97% #ffffff;
+}
+
+.write-me-form__input_select::-ms-expand
+{
+    display: none;
+}
+
+.write-me-form__radio
+{
+    cursor: pointer;
+    margin: 4px 4px 0 0;
+}
+
+.write-me-form__radio_woman
+{
+    margin-left: 35px;
+}
+
+.write-me-form__label_radio
+{
+    margin: 15px 0 0 0;
+    display: inline;
+    font: 400 18px/32px "Open Sans", sans-serif;
+    color: #333333;
+    letter-spacing: 0;
+}
+
+.write-me-form__gender
+{
+    margin: 0 0 15px 0;
+}
+
+.write-me-form__input_area
+{
+    margin: 4px 0 15px 0;
+    height: 150px;
+    overflow : auto;
+}
+
+.write-me-form__button
+{
+    width: 100%;
+}
+
+.footer
+{
+    font: 16px/32px Georgia, serif;
+    color: #555555;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+.main__footer
+{
+    margin: 47px 0 0;
+    padding: 20px 5px;
+}
+
+.clear
+{
+    clear: both;
+}
+
+@media screen and (min-width: 480px)
+{
+
+    .about
+    {
+        padding: 25px 25px;
+    }
+
+    .about__quote
+    {
+        margin: 20px 40px;
+    }
+
+    .main__write-me {
+        padding: 0 25px;
+    }
+}
+
+@media screen and (min-width: 768px)
+{
+
+    .burger-button
+    {
+        display: none;
+    }
+
+    .menu__item
+    {
+        float: left;
+    }
+
+    .menu
+    {
+        height: auto;
+    }
+
+    .about__quote
+    {
+        margin: 20px 60px;
+    }
+
+    .favorites
+    {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .favorites__writers,
+    .favorites__films
+    {
+        margin: 0;
+    }
+
+
+    .write-me-form
+    {
+        width: 541px;
+    }
+}
+
+@media screen and (min-width: 1024px)
+{
+    .header
+    {
+        position: static;
+    }
+
+    .profile__about
+    {
+        margin: 17px auto 0;
+        padding: 20px 0 15px;
+    }
+
+    .main__profile
+    {
+        margin: 190px auto 0;
+        padding: 0 20px;
+    }
+
+    .about__avatar
+    {
+        left: -172px;
+        transform: translateX(0);
+    }
+
+    .img-frame_avatar
+    {
+        margin: 0 64px 0 32px;
+        float: left;
+        width: 330px;
+        height: 350px;
+    }
+
+    .img-frame_film
+    {
+        max-width: 285px;
+        height: 190px;
+    }
+
+    .about__header
+    {
+        display: block;
+    }
+
+    .quote
+    {
+        color: #f5f5f5;
+        font: italic 28px/42px Georgia, serif;
+    }
+
+    .about__quote
+    {
+        margin: 25px 25px 81px 2px;
+    }
+
+    .quote__author
+    {
+        font: 600 16px/42px "Open Sans", sans-serif;
+        color: #f5f5f5;
+        margin: 3px 0 0 4px;
+    }
+
+    .about__name
+    {
+        text-align: left;
+        margin: 0 0 50px 0;
+    }
+
+    .about__name::after
+    {
+        position: relative;
+        top: 40px;
+        left: -213px;
+        transform: none;
+    }
+
+    .about__info
+    {
+        display: block;
+    }
+
+    .favorites
+    {
+        display: block;
+        order: 0;
+        width: 422px;
+        float: left;
+    }
+
+    .favorites__writers
+    {
+        margin: 38px 40px 0 30px;
+    }
+
+    .favorites__films
+    {
+        margin: 40px 40px 75px 30px;
+    }
+
+    .favorites__title
+    {
+        margin: 0 0 12px 0;
+        font: 600 24px/32px "Open Sans", sans-serif;
+        color: #15a98c;
+    }
+
+    .favorites__list
+    {
+        margin: 0;
+        padding: 0 0 0 22px;
+    }
+
+    .favorites__item
+    {
+        font: 19px/36px Georgia, serif;
+        color: #555555;
+    }
+
+    .bio
+    {
+        margin: 8px 33px 43px 0;
+        font: 19px/32px Georgia, serif;
+        color: #555555;
+    }
+
+    .hobby__title
+    {
+        font: 400 36px/42px "Open Sans", sans-serif;
+    }
+
+    .hobby__description
+    {
+        font: 19px/32px Georgia, serif;
+        margin: 0 40px 41px 0;
+    }
+
+    .contact-me,
+    .contact-me__link
+    {
+        text-align: left;
+        font: 19px/32px Georgia, serif;
+        color: #15a98b;
+    }
+
+    .contact-me__link:hover
+    {
+        color: #098d72;
+        cursor: pointer;
+    }
+
+    .main__favorite-films
+    {
+        padding: 38px 0 60px 0;
+    }
+
+    .favorite-films__container
+    {
+        width: 610px;
+        margin: 0 auto 0;
+    }
+
+    .films
+    {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .films__film
+    {
+        width: 285px;
+        margin: 10px 10px;
+    }
+
+    .film__title
+    {
+        font: 700 22px/32px "Open Sans", sans-serif;
+        color: #333333;
+        margin: 22px 0 17px;
+    }
+
+    .film__description
+    {
+        font: 16px/28px Georgia, serif;
+        color: #555555;
+        margin: 0;
+    }
+
+    .film__screenshot
+    {
+        position: relative;
+        transform: translate(0, 0);
+        transition: transform 0.2s ease 0.1s;
+    }
+
+    .film__screenshot:hover
+    {
+        filter: opacity(80%);
+        transform: scale(1.1);
+    }
+
+    .film__screenshot_shawshank
+    {
+        top: 0;
+        left: -73px;
+    }
+
+    .film__screenshot_awake
+    {
+        top: -26px;
+        left: -17px;
+    }
+
+    .film__screenshot_insidious
+    {
+        top: -12px;
+        left: -53px;
+    }
+
+    .film__screenshot_gravity
+    {
+        top: -50px;
+        left: -16px;
+    }
+
+    .button-container
+    {
+        margin: 53px 0 0 0;
+    }
+
+    .button_films
+    {
+        transform: translate(-10px, 0);
+        display: inline-block;
+    }
+
+    .write-me__title
+    {
+        padding: 0 10px 0 0;
+        margin: 50px 0 76px 0;
+    }
+
+    .write-me__title::before,
+    .write-me__title::after
+    {
+        margin: 0 30px;
+        content: '';
+        display: inline-block;
+        background-color: #c4c4c4;
+        width: 200px;
+        height: 1px;
+        vertical-align: middle; 
+    }
+
+    .write-me-form__input
+    {
+        margin: 3px 0 23.5px;
+    }
+
+    .write-me-form__input:hover,
+    .write-me-form__input:focus
+    {
+        border-color: #15a98c;
+    }
+
+    .write-me-form__label_select
+    {
+        margin: 25px 0 0 0;
+    }
+
+    .write-me-form__input_select
+    {
+        margin: 2px 0 41px 0;
+    }
+
+    .write-me-form__input_select::-ms-expand
+    {
+        display: none;
+    }
+
+    .write-me-form__radio
+    {
+        cursor: pointer;
+        margin: 4px 4px 0 0;
+    }
+
+    .write-me-form__radio_woman
+    {
+        margin-left: 35px;
+    }
+
+    .write-me-form__label_radio
+    {
+        margin: 36px 0 0 0;
+    }
+
+    .write-me-form__gender
+    {
+        margin: 0 0 36px 0;
+    }
+    .write-me-form__input_area
+    {
+        margin: 4px 0 50px 0;
+    }
+
+    .write-me-form__button
+    {
+        width: 220px;
+    }
+
+    .main__footer {
+        padding: 20px 17px 20px 0;
+    }
+}
+
+@media screen and (min-width: 1250px)
+{
+    .favorite-films__container
+    {
+        margin: 0 auto 0;
+        width: 1220px;
+    }
+
+    .films__film
+    {
+        width: 285px;
+        float: left;
+        margin: 0 10px;
+    }
+
+    .films
+    {
+        display: block;
+        flex-wrap: nowrap;
+    }
+}
