@@ -29,7 +29,7 @@
     cursor: pointer;
     height: 25px;
     position: relative;
-    transition: all 0.4s ease 0;
+    transition: all 0.4s ease;
     width: 25px;
     z-index: 10;
     padding: 10px;
