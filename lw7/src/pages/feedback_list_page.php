@@ -2,7 +2,7 @@
 
 function feedbackListPage()
 {
-    $dataPath = __ROOT__ . '/src/data/';
+    $dataPath = SRC_PATH . '/data/';
     $email = strtolower(getPOSTParameter('email'));
     $filePath = $dataPath . $email . '.txt';
     if ($email && file_exists($filePath))

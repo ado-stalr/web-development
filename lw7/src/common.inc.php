@@ -1,8 +1,16 @@
 <?php
-define('__ROOT__', dirname(dirname(__FILE__)));
-require_once(__ROOT__ . '/src/utils/request.php');
-require_once(__ROOT__ . '/src/utils/template.php');
+define('SRC_PATH', dirname(__FILE__));
 
-require_once(__ROOT__ . '/src/pages/main_page.php');
-require_once(__ROOT__ . '/src/pages/save_feedback_page.php');
-require_once(__ROOT__ . '/src/pages/feedback_list_page.php');
+define ('PARAMS_REGEXP', [
+    'name' => '/^([ a-zA-Zа-яА-Я]){1,255}$/u',
+    'email' => '/^[a-zA-Z0-9.!#$%&*+=?^_{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$/',
+    'subject' => '/^([a-zA-Zа-яА-Я 0-9,.:;?!-%#@]){1,255}$/u',
+    'message' => '/^(.){1,1000}$/'
+]);
+
+require_once(SRC_PATH . '/utils/request.php');
+require_once(SRC_PATH . '/utils/template.php');
+
+require_once(SRC_PATH . '/pages/main_page.php');
+require_once(SRC_PATH . '/pages/save_feedback_page.php');
+require_once(SRC_PATH . '/pages/feedback_list_page.php');

@@ -1,10 +1,4 @@
 <?php
-define ('paramsRegexp', [
-    'name' => '/^([ a-zA-Zа-яА-Я]){2,255}$/u',
-    'email' => '/^[a-zA-Z0-9.!#$%&*+=?^_{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$/',
-    'subject' => '/^([a-zA-Zа-яА-Я 0-9,.:;?!-%#@]){1,255}$/u',
-    'message' => '/^(.){2,1000}$/'
-]);
 
 function generateErrorMessage($param, $value): string
 {
@@ -41,38 +35,38 @@ function generateErrorMessage($param, $value): string
 function validateFeedback(): array
 {
     $isValid = true;
-    $validateResult = [];
+    $validatedResult = [];
 
-    foreach (paramsRegexp as $param => $Regexp) {
+    foreach (PARAMS_REGEXP as $param => $regexp) {
         $value = getPOSTParameter($param);
-        $validateResult[$param] = $value;
-        if (!preg_match($Regexp, $value))
+        $validatedResult[$param] = $value;
+        if (!preg_match($regexp, $value))
         {
-            echo ($param . ' ' . preg_match($Regexp, $value));
             $isValid = false;
-            $validateResult[$param . '_error_msg'] = generateErrorMessage($param, $value);
+            $validatedResult[$param . '_error_msg'] = generateErrorMessage($param, $value);
         }
     }
-    $validateResult['valid'] = $isValid;
-    return $validateResult;
+    $validatedResult['valid'] = $isValid;
+    return $validatedResult;
 }
 
 function saveFeedbackPage(): void
 {
-    $dataPath = __ROOT__ . '/src/data/';
-    $validateResult = validateFeedback();
+    $dataPath = SRC_PATH . '/data/';
+    $validatedResult = validateFeedback();
 
-    if ($validateResult['valid'] === true)
+    if ($validatedResult['valid'] === true)
     {
-        $fileName = $validateResult['email'] . '.txt';
-        foreach (paramsRegexp as $param => $Regexp)
+        $userInfo = [];
+        $fileName = $validatedResult['email'] . '.txt';
+        foreach (PARAMS_REGEXP as $param => $regexp)
         {
-            $userInfo[$param] = $validateResult[$param];
+            $userInfo[$param] = $validatedResult[$param];
         }
         file_put_contents($dataPath . $fileName, json_encode($userInfo));
 
-        $validateResult['submited'] = true;
+        $validatedResult['submited'] = true;
     }
 
-    renderTemplate('main.tpl.php', $validateResult);
+    renderTemplate('main.tpl.php', $validatedResult);
 }
