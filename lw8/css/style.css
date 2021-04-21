@@ -1,0 +1,101 @@
+.main
+{
+    background-color: lightyellow;
+    padding: 30px 0;
+}
+
+.container
+{
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.task
+{
+    font-size: 0;
+}
+
+.task__title
+{
+    font-size: 24px;
+}
+
+.task__result
+{
+    font-size: 24px;
+    margin-bottom: 30px;
+    padding: 0 0 0 15px;
+    font: 600 20px/25px "Open Sans", sans-serif;
+    color: #666666;
+}
+
+.button
+{
+    display: inline-block;
+    width: 27%;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 3px;
+    text-decoration: none;
+    font: 700 14px/14px "Open Sans", sans-serif;
+    letter-spacing: 0px;
+    padding: 20px 0;
+}
+
+.button_theme_island
+{
+    color: #ffffff;
+    border: 1px solid #e74c3c;
+    background-color: #e74c3c;
+}
+
+.button_theme_island:hover
+{
+    background-color: #e5412e;
+    border: 1px solid #e5412e;
+}
+
+.button_theme_istransparent
+{
+    margin-top: 2px;
+    margin-bottom: 2px;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    background-color: rgba(255 ,255 , 255, 0);
+    padding: 18px 0;
+}
+
+.button_theme_istransparent:hover
+{
+    background-color: rgba(255 ,255 , 255, 0.1);
+}
+
+.button_disabled
+{
+    background-color: #706b65;
+    border-color: #706b65;
+    color: #3c3530;
+    pointer-events: none;
+}
+
+.text-input
+{
+    background-color: #ffffff00;
+    margin: 0 3% 3px 0;
+    padding: 16px 16px 15.5px;
+    box-sizing: border-box;
+    outline: none;
+    display: inline-block;
+    border: 0px;
+    border-radius: 1px;
+    border-bottom: #ececec solid 1px;
+    width: 70%;
+    font: 600 20px/25px "Open Sans", sans-serif;
+    color: #999999;
+}
+
+.text-input:hover,
+.text-input:focus
+{
+    border-color: #e74e3e;
+}
