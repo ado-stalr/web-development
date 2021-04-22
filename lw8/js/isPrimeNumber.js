@@ -14,7 +14,7 @@ function isPrimeNumber(parameter) {
 
 function checkOneNumber(number) {
   if ( typeof(number) !== 'number' ) {
-    console.log(number + ' isn\'t a number');
+    console.log(`"${number}" isn\'t a number`);
     return null;
   }
 

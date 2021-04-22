@@ -1,4 +1,6 @@
 function init() {
+  const resultStr = 'Result: ';
+
   let task1_1_button = document.getElementById('task1_1');
   let task1_2_button = document.getElementById('task1_2');
   let task2_button = document.getElementById('task2');
@@ -10,8 +12,6 @@ function init() {
   let task1_1_result = document.getElementById('result_task1_1');
   let task1_2_result = document.getElementById('result_task1_2');
   let task2_result = document.getElementById('result_task2');
-
-  resultStr = 'Result: ';
 
   function runTask1_1() {
     let value = task1_1_input.value;
