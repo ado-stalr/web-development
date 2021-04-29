@@ -1,38 +1,38 @@
 function init() {
   const resultStr = 'Result: ';
 
-  let task1_1_button = document.getElementById('task1_1');
-  let task1_2_button = document.getElementById('task1_2');
-  let task2_button = document.getElementById('task2');
+  let firstTask1Button = document.getElementById('task1_1');
+  let firstTask2Button = document.getElementById('task1_2');
+  let secondTaskButton = document.getElementById('task2');
 
-  let task1_1_input = document.getElementById('input_task1_1');
-  let task1_2_input = document.getElementById('input_task1_2');
-  let task2_input = document.getElementById('input_task2');
+  let firstTask1Input = document.getElementById('input_task1_1');
+  let firstTask2Input = document.getElementById('input_task1_2');
+  let secondTaskInput = document.getElementById('input_task2');
 
-  let task1_1_result = document.getElementById('result_task1_1');
-  let task1_2_result = document.getElementById('result_task1_2');
-  let task2_result = document.getElementById('result_task2');
+  let firstTask1Result = document.getElementById('result_task1_1');
+  let firstTask2Result = document.getElementById('result_task1_2');
+  let secondTaskResult = document.getElementById('result_task2');
 
-  function runTask1_1() {
-    let value = task1_1_input.value;
+  function runFirstTask1() {
+    let value = firstTask1Input.value;
     let number = (parseFloat(value) === 0) ? 0 : parseFloat(value) || value;
 
-    task1_1_result.innerHTML = resultStr + isPrimeNumber(number);
+    firstTask1Result.innerHTML = resultStr + isPrimeNumber(number);
   }
 
-  function runTask1_2() {
-    let arr = task1_2_input.value.split(',').map(n => (parseFloat(n) === 0) ? 0 : parseFloat(n) || n);
+  function runFirstTask2() {
+    let arr = firstTask2Input.value.split(',').map(n => (parseFloat(n) === 0) ? 0 : parseFloat(n) || n);
 
-    task1_2_result.innerHTML = resultStr + isPrimeNumber(arr).map(x => '' + x).join(', ');
+    firstTask2Result.innerHTML = resultStr + isPrimeNumber(arr).map(x => '' + x).join(', ');
   }
 
-  function runTask2() {
-    task2_result.innerHTML = resultStr + String( calc(task2_input.value) );
+  function runSecondTask() {
+    secondTaskResult.innerHTML = resultStr + String( calc(secondTaskInput.value) );
   }
 
-  task1_1_button.onclick = runTask1_1;
-  task1_2_button.onclick = runTask1_2;
-  task2_button.onclick = runTask2;
+  firstTask1Button.onclick = runFirstTask1;
+  firstTask2Button.onclick = runFirstTask2;
+  secondTaskutton.onclick = runSecondTask;
 }
 
 init();
