@@ -102,29 +102,31 @@ INSERT INTO students(first_name, last_name, age, group_id) VALUES ('Костя',
 
 SELECT
     id,
-    first_name AS 'Имя',
     last_name AS 'Фамилия',
+    first_name AS 'Имя',
     age AS 'Возраст'
 FROM
     students
 WHERE
-    age = 19;
+    age = 19
+ORDER BY Фамилия, Имя;
 
 SELECT
     students.id,
-    students.first_name AS 'Имя',
     students.last_name AS 'Фамилия',
+    students.first_name AS 'Имя',
     students.age AS 'Возраст',
     groups.title AS 'Группа'
 FROM
     students JOIN groups ON students.group_id = groups.id
 WHERE
-    groups.id = 'ТТ-31';
+    groups.title = 'ТТ-31'
+ORDER BY Фамилия, Имя;
 
 SELECT
     students.id,
-    students.first_name AS 'Имя',
     students.last_name AS 'Фамилия',
+    students.first_name AS 'Имя',
     students.age AS 'Возраст',
     groups.title AS 'Группа',
     departments.title AS 'Факультет'
@@ -133,7 +135,8 @@ FROM
     JOIN groups ON students.group_id = groups.id
     JOIN departments ON groups.department_id = departments.id
 WHERE
-    departments.title = 'Институт механики и машиностроения';
+    departments.title = 'Институт механики и машиностроения'
+ORDER BY Фамилия, Имя;
 
 SELECT
     students.first_name AS 'Имя',
